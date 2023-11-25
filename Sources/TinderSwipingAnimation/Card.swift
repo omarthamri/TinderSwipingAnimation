@@ -4,7 +4,7 @@
 //
 //  Created by omar thamri on 26/11/2023.
 //
-#if !os(macOS)
+
 import SwiftUI
 
 struct Card: View {
@@ -35,4 +35,3 @@ struct Card: View {
         
     }
 }
-#endif

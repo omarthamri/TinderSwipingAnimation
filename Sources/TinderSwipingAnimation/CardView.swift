@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-#if !os(macOS)
 struct CardView: View {
     @State var x: [CGFloat] = [0,0,0,0,0,0,0]
     @State var degree: [Double] = [0,0,0,0,0,0,0]
@@ -56,4 +55,3 @@ struct CardView: View {
         .animation(.default)
     }
 }
-#endif

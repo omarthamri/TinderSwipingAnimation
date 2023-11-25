@@ -4,7 +4,7 @@
 //
 //  Created by omar thamri on 26/11/2023.
 //
-#if !os(macOS)
+
 import SwiftUI
 
 struct ButtonsView: View {
@@ -53,4 +53,3 @@ struct ButtonsView: View {
         .padding(10)
     }
 }
-#endif

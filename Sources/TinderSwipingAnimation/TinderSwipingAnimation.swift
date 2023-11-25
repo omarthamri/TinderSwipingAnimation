@@ -5,7 +5,6 @@
 //  Created by omar thamri on 25/11/2023.
 //
 
-#if !os(macOS)
 import SwiftUI
 
 public struct TinderSwipingAnimation: View {
@@ -15,7 +14,7 @@ public struct TinderSwipingAnimation: View {
     public init(cards: [CardModel]) {
         self.cards = cards
     }
-    var body: some View {
+    public var body: some View {
         ZStack{
             Color.black.opacity(0.05)
                 .ignoresSafeArea(edges: .all)
@@ -23,5 +22,3 @@ public struct TinderSwipingAnimation: View {
         }
     }
 }
-
-#endif
