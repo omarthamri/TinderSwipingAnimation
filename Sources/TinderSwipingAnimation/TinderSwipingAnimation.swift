@@ -9,7 +9,12 @@
 import SwiftUI
 
 public struct TinderSwipingAnimation: View {
+    
     var cards: [CardModel]
+    
+    public init(cards: [CardModel]) {
+        self.cards = cards
+    }
     public var body: some View {
         ZStack{
             Color.black.opacity(0.05)
