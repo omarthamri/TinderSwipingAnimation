@@ -15,7 +15,7 @@ public struct TinderSwipingAnimation: View {
     public init(cards: [CardModel]) {
         self.cards = cards
     }
-    public var body: some View {
+    var body: some View {
         ZStack{
             Color.black.opacity(0.05)
                 .ignoresSafeArea(edges: .all)
