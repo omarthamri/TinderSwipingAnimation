@@ -9,13 +9,14 @@ import SwiftUI
 
 struct Card: View {
     var card: CardModel
+    var buttons: [ButtonModel]
     var body: some View {
         ZStack(alignment: .bottomLeading) {
             VStack{
                 Image(card.imageName)
                     .resizable()
                     .frame(height: 410)
-                ButtonsView()
+                ButtonsView(buttons: buttons)
             }
             .background(.white)
             .clipShape(RoundedRectangle(cornerRadius: 25))

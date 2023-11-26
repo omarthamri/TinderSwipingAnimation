@@ -11,10 +11,11 @@ struct CardView: View {
     @State var x: [CGFloat] = [0,0,0,0,0,0,0]
     @State var degree: [Double] = [0,0,0,0,0,0,0]
     var cards: [CardModel]
+    var buttons: [ButtonModel]
     var body: some View {
         ZStack {
             ForEach(0..<cards.count,id: \.self) { i in
-                Card(card: cards[i])
+                Card(card: cards[i], buttons: buttons)
                     .offset(x: self.x[i])
                     .rotationEffect(.init(degrees: degree[i]))
                     .gesture(DragGesture()

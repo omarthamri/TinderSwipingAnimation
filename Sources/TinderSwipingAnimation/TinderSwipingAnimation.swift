@@ -10,15 +10,17 @@ import SwiftUI
 public struct TinderSwipingAnimation: View {
     
     var cards: [CardModel]
-    
-    public init(cards: [CardModel]) {
+    var buttons: [ButtonModel]
+    public init(cards: [CardModel],buttons: [ButtonModel]) {
         self.cards = cards
+        self.buttons = buttons
     }
+
     public var body: some View {
         ZStack{
             Color.black.opacity(0.05)
                 .ignoresSafeArea(edges: .all)
-            CardView(cards: cards)
+            CardView(cards: cards, buttons: buttons)
         }
     }
 }
