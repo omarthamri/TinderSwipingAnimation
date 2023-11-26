@@ -5,7 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "TinderSwipingAnimation",
-    defaultLocalization: "fr",
+    defaultLocalization: "en",
     platforms: [
         .iOS(.v16)
     ],
