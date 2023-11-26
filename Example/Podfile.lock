@@ -1,0 +1,16 @@
+PODS:
+  - MyTinderSwipingAnimation (0.1.0)
+
+DEPENDENCIES:
+  - MyTinderSwipingAnimation (from `../`)
+
+EXTERNAL SOURCES:
+  MyTinderSwipingAnimation:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  MyTinderSwipingAnimation: b9ff3507b225964b590ec32e0ff8dfc6b0f1acd7
+
+PODFILE CHECKSUM: 5fa86ecd16163c0177c9afbba5cbebbdc6e8a901
+
+COCOAPODS: 1.14.3

@@ -1,0 +1,610 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3A9F6C888B464443703D53D558C7ADF7 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB55D5199CAAFE899860C6F21AC5B96 /* ReplaceMe.swift */; };
+		50921F94CE1096FDA8B3CDA3B5D72064 /* MyTinderSwipingAnimation-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B5AFC95F028CDBC91BB2BA77A9F04AD /* MyTinderSwipingAnimation-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		74EFD9F025DF0211B2D16A24B7B5C33A /* Pods-MyTinderSwipingAnimation_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E25806397F51FF0A43AAAF2C6ED7DB82 /* Pods-MyTinderSwipingAnimation_Tests-dummy.m */; };
+		98547E82166C5CFF50EF26E6A060E639 /* MyTinderSwipingAnimation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D369B66AE47EB988CF2124F1452D2BE0 /* MyTinderSwipingAnimation-dummy.m */; };
+		A5E24E7B2BCA958667944998CC9C2856 /* Pods-MyTinderSwipingAnimation_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E71A211D635B6A43E01AE8114E6D452 /* Pods-MyTinderSwipingAnimation_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B55D94AAD1968370C829A496BE7630F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		C8168616E343E892BFE3D9963DE91DA7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6E2E079332D01B771226F1630E5BCADF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8B37D90C29FE6D6FE37786E00EF7D8E3;
+			remoteInfo = MyTinderSwipingAnimation;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		14CFFE17E7C407339ED7EAA49ED50AEB /* Pods-MyTinderSwipingAnimation_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MyTinderSwipingAnimation_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		2AA63B8197F7833E0F44C99C7E40F1D1 /* Pods-MyTinderSwipingAnimation_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MyTinderSwipingAnimation_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		2B5AFC95F028CDBC91BB2BA77A9F04AD /* MyTinderSwipingAnimation-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MyTinderSwipingAnimation-umbrella.h"; sourceTree = "<group>"; };
+		2E71A211D635B6A43E01AE8114E6D452 /* Pods-MyTinderSwipingAnimation_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MyTinderSwipingAnimation_Tests-umbrella.h"; sourceTree = "<group>"; };
+		3BC89972171F2460E4F105D2D7E849BD /* MyTinderSwipingAnimation */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MyTinderSwipingAnimation; path = MyTinderSwipingAnimation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A9272BE8FFB957ACF6A745CE354B864 /* MyTinderSwipingAnimation-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MyTinderSwipingAnimation-Info.plist"; sourceTree = "<group>"; };
+		5A014C3768DE92A289CB9901479AF2F8 /* MyTinderSwipingAnimation.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MyTinderSwipingAnimation.modulemap; sourceTree = "<group>"; };
+		61E3442E0C8A333D4878483A090E4F4D /* Pods-MyTinderSwipingAnimation_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MyTinderSwipingAnimation_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		6E8B8DABBCE36478BACBD59E2DF15FA8 /* Pods-MyTinderSwipingAnimation_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-MyTinderSwipingAnimation_Tests"; path = Pods_MyTinderSwipingAnimation_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		8084BC7D407FB4D484CCF78C338F53AA /* MyTinderSwipingAnimation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MyTinderSwipingAnimation.debug.xcconfig; sourceTree = "<group>"; };
+		95434A7DD9CE409CBC6084A451A4E56B /* Pods-MyTinderSwipingAnimation_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MyTinderSwipingAnimation_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A7278B437E2BD803A8FA7F337FF444FB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		ADEFFB56C8377C7FC4AF87B7367C890F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		BE152215EE6F2192F1D77416A65E06FB /* MyTinderSwipingAnimation-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MyTinderSwipingAnimation-prefix.pch"; sourceTree = "<group>"; };
+		C87BB2FB60392C33F88650B0BEE0B1C5 /* Pods-MyTinderSwipingAnimation_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MyTinderSwipingAnimation_Tests-Info.plist"; sourceTree = "<group>"; };
+		D369B66AE47EB988CF2124F1452D2BE0 /* MyTinderSwipingAnimation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MyTinderSwipingAnimation-dummy.m"; sourceTree = "<group>"; };
+		D904B1D10A601AC4B11E287A59D84AC7 /* MyTinderSwipingAnimation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MyTinderSwipingAnimation.release.xcconfig; sourceTree = "<group>"; };
+		DEB55D5199CAAFE899860C6F21AC5B96 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = MyTinderSwipingAnimation/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
+		E25806397F51FF0A43AAAF2C6ED7DB82 /* Pods-MyTinderSwipingAnimation_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MyTinderSwipingAnimation_Tests-dummy.m"; sourceTree = "<group>"; };
+		E663812DD00188F1AF782B876684725D /* Pods-MyTinderSwipingAnimation_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MyTinderSwipingAnimation_Tests.modulemap"; sourceTree = "<group>"; };
+		EE3314A45205F4C7D86F18DF43C1CFF8 /* MyTinderSwipingAnimation.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = MyTinderSwipingAnimation.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		F063F3E6FF9353285ACF51E5F73C8769 /* Pods-MyTinderSwipingAnimation_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MyTinderSwipingAnimation_Tests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0E7F32AF85267F47D57504B3B552D20E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8168616E343E892BFE3D9963DE91DA7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7DA893ED120CCCEEEFD6F47D52F9961 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B55D94AAD1968370C829A496BE7630F9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0015A0EAE93D934B61ECC485B3EE56B7 /* MyTinderSwipingAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				DEB55D5199CAAFE899860C6F21AC5B96 /* ReplaceMe.swift */,
+				3CC5959EDC74433BAF72F011F7B76A81 /* Pod */,
+				5B5BD1A4D7F24E4C0D1E4FF2AB9ABA39 /* Support Files */,
+			);
+			name = MyTinderSwipingAnimation;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		23BF2DCBE1AEE9D2E6B58048258AB5B8 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				60DFFF577375720254B6F717E235DD28 /* Pods-MyTinderSwipingAnimation_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		37E593A5C960F53AA2C19332B75ED9D0 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0015A0EAE93D934B61ECC485B3EE56B7 /* MyTinderSwipingAnimation */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		3CC5959EDC74433BAF72F011F7B76A81 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				A7278B437E2BD803A8FA7F337FF444FB /* LICENSE */,
+				EE3314A45205F4C7D86F18DF43C1CFF8 /* MyTinderSwipingAnimation.podspec */,
+				ADEFFB56C8377C7FC4AF87B7367C890F /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		5B5BD1A4D7F24E4C0D1E4FF2AB9ABA39 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5A014C3768DE92A289CB9901479AF2F8 /* MyTinderSwipingAnimation.modulemap */,
+				D369B66AE47EB988CF2124F1452D2BE0 /* MyTinderSwipingAnimation-dummy.m */,
+				4A9272BE8FFB957ACF6A745CE354B864 /* MyTinderSwipingAnimation-Info.plist */,
+				BE152215EE6F2192F1D77416A65E06FB /* MyTinderSwipingAnimation-prefix.pch */,
+				2B5AFC95F028CDBC91BB2BA77A9F04AD /* MyTinderSwipingAnimation-umbrella.h */,
+				8084BC7D407FB4D484CCF78C338F53AA /* MyTinderSwipingAnimation.debug.xcconfig */,
+				D904B1D10A601AC4B11E287A59D84AC7 /* MyTinderSwipingAnimation.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/MyTinderSwipingAnimation";
+			sourceTree = "<group>";
+		};
+		60DFFF577375720254B6F717E235DD28 /* Pods-MyTinderSwipingAnimation_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				E663812DD00188F1AF782B876684725D /* Pods-MyTinderSwipingAnimation_Tests.modulemap */,
+				61E3442E0C8A333D4878483A090E4F4D /* Pods-MyTinderSwipingAnimation_Tests-acknowledgements.markdown */,
+				2AA63B8197F7833E0F44C99C7E40F1D1 /* Pods-MyTinderSwipingAnimation_Tests-acknowledgements.plist */,
+				E25806397F51FF0A43AAAF2C6ED7DB82 /* Pods-MyTinderSwipingAnimation_Tests-dummy.m */,
+				95434A7DD9CE409CBC6084A451A4E56B /* Pods-MyTinderSwipingAnimation_Tests-frameworks.sh */,
+				C87BB2FB60392C33F88650B0BEE0B1C5 /* Pods-MyTinderSwipingAnimation_Tests-Info.plist */,
+				2E71A211D635B6A43E01AE8114E6D452 /* Pods-MyTinderSwipingAnimation_Tests-umbrella.h */,
+				14CFFE17E7C407339ED7EAA49ED50AEB /* Pods-MyTinderSwipingAnimation_Tests.debug.xcconfig */,
+				F063F3E6FF9353285ACF51E5F73C8769 /* Pods-MyTinderSwipingAnimation_Tests.release.xcconfig */,
+			);
+			name = "Pods-MyTinderSwipingAnimation_Tests";
+			path = "Target Support Files/Pods-MyTinderSwipingAnimation_Tests";
+			sourceTree = "<group>";
+		};
+		C9ABEDF7FAFE8A9CD84D0928D9E30EDE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3BC89972171F2460E4F105D2D7E849BD /* MyTinderSwipingAnimation */,
+				6E8B8DABBCE36478BACBD59E2DF15FA8 /* Pods-MyTinderSwipingAnimation_Tests */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				37E593A5C960F53AA2C19332B75ED9D0 /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				C9ABEDF7FAFE8A9CD84D0928D9E30EDE /* Products */,
+				23BF2DCBE1AEE9D2E6B58048258AB5B8 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		23AEB075B285B92BF9AE5A9C9BD870CF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5E24E7B2BCA958667944998CC9C2856 /* Pods-MyTinderSwipingAnimation_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		666B6DD68C90357CBB80F33D879ED6E6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50921F94CE1096FDA8B3CDA3B5D72064 /* MyTinderSwipingAnimation-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8B37D90C29FE6D6FE37786E00EF7D8E3 /* MyTinderSwipingAnimation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B8EB616275FE8DABD762657401EBCAC /* Build configuration list for PBXNativeTarget "MyTinderSwipingAnimation" */;
+			buildPhases = (
+				666B6DD68C90357CBB80F33D879ED6E6 /* Headers */,
+				69AE487F153DE64804F621C6E9370C78 /* Sources */,
+				C7DA893ED120CCCEEEFD6F47D52F9961 /* Frameworks */,
+				EEA5862E614354F39E345046EA868903 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyTinderSwipingAnimation;
+			productName = MyTinderSwipingAnimation;
+			productReference = 3BC89972171F2460E4F105D2D7E849BD /* MyTinderSwipingAnimation */;
+			productType = "com.apple.product-type.framework";
+		};
+		D8FDCDE9E7D45BB71AC566458026C508 /* Pods-MyTinderSwipingAnimation_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 078C8A48808ABB683A6B7585B1E4E005 /* Build configuration list for PBXNativeTarget "Pods-MyTinderSwipingAnimation_Tests" */;
+			buildPhases = (
+				23AEB075B285B92BF9AE5A9C9BD870CF /* Headers */,
+				2A16BF85F3B61F42B277304752BDFC27 /* Sources */,
+				0E7F32AF85267F47D57504B3B552D20E /* Frameworks */,
+				03E0ACC39A33EAED97D6580B4EFFA77E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C6F753864E232BBCB789915B4881E154 /* PBXTargetDependency */,
+			);
+			name = "Pods-MyTinderSwipingAnimation_Tests";
+			productName = Pods_MyTinderSwipingAnimation_Tests;
+			productReference = 6E8B8DABBCE36478BACBD59E2DF15FA8 /* Pods-MyTinderSwipingAnimation_Tests */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = C9ABEDF7FAFE8A9CD84D0928D9E30EDE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8B37D90C29FE6D6FE37786E00EF7D8E3 /* MyTinderSwipingAnimation */,
+				D8FDCDE9E7D45BB71AC566458026C508 /* Pods-MyTinderSwipingAnimation_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		03E0ACC39A33EAED97D6580B4EFFA77E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEA5862E614354F39E345046EA868903 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2A16BF85F3B61F42B277304752BDFC27 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74EFD9F025DF0211B2D16A24B7B5C33A /* Pods-MyTinderSwipingAnimation_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69AE487F153DE64804F621C6E9370C78 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98547E82166C5CFF50EF26E6A060E639 /* MyTinderSwipingAnimation-dummy.m in Sources */,
+				3A9F6C888B464443703D53D558C7ADF7 /* ReplaceMe.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C6F753864E232BBCB789915B4881E154 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MyTinderSwipingAnimation;
+			target = 8B37D90C29FE6D6FE37786E00EF7D8E3 /* MyTinderSwipingAnimation */;
+			targetProxy = 6E2E079332D01B771226F1630E5BCADF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		30E0B9EFD9A5C45D0D351231E81B30B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		3DE8A0C08275AD922CD98D56A4B26B5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D904B1D10A601AC4B11E287A59D84AC7 /* MyTinderSwipingAnimation.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MyTinderSwipingAnimation/MyTinderSwipingAnimation-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MyTinderSwipingAnimation/MyTinderSwipingAnimation-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MyTinderSwipingAnimation/MyTinderSwipingAnimation.modulemap";
+				PRODUCT_MODULE_NAME = MyTinderSwipingAnimation;
+				PRODUCT_NAME = MyTinderSwipingAnimation;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8A975856BDE4912A239F3C73901FB5AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8084BC7D407FB4D484CCF78C338F53AA /* MyTinderSwipingAnimation.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MyTinderSwipingAnimation/MyTinderSwipingAnimation-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MyTinderSwipingAnimation/MyTinderSwipingAnimation-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MyTinderSwipingAnimation/MyTinderSwipingAnimation.modulemap";
+				PRODUCT_MODULE_NAME = MyTinderSwipingAnimation;
+				PRODUCT_NAME = MyTinderSwipingAnimation;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		EF1B49E97386ECF7624306C8B92A64FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F063F3E6FF9353285ACF51E5F73C8769 /* Pods-MyTinderSwipingAnimation_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MyTinderSwipingAnimation_Tests/Pods-MyTinderSwipingAnimation_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MyTinderSwipingAnimation_Tests/Pods-MyTinderSwipingAnimation_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F269B00A61063592C9198A2C112430CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14CFFE17E7C407339ED7EAA49ED50AEB /* Pods-MyTinderSwipingAnimation_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MyTinderSwipingAnimation_Tests/Pods-MyTinderSwipingAnimation_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MyTinderSwipingAnimation_Tests/Pods-MyTinderSwipingAnimation_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F4FF6A0D1970CA9705974E3CB2134802 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		078C8A48808ABB683A6B7585B1E4E005 /* Build configuration list for PBXNativeTarget "Pods-MyTinderSwipingAnimation_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F269B00A61063592C9198A2C112430CC /* Debug */,
+				EF1B49E97386ECF7624306C8B92A64FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4FF6A0D1970CA9705974E3CB2134802 /* Debug */,
+				30E0B9EFD9A5C45D0D351231E81B30B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9B8EB616275FE8DABD762657401EBCAC /* Build configuration list for PBXNativeTarget "MyTinderSwipingAnimation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A975856BDE4912A239F3C73901FB5AF /* Debug */,
+				3DE8A0C08275AD922CD98D56A4B26B5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

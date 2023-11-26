@@ -1,0 +1,6 @@
+framework module MyTinderSwipingAnimation {
+  umbrella header "MyTinderSwipingAnimation-umbrella.h"
+
+  export *
+  module * { export * }
+}
