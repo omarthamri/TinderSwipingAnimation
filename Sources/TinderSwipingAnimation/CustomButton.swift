@@ -11,7 +11,9 @@ struct CustomButton: View {
     
     var button: ButtonModel
     var body: some View {
-        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+        Button(action: {
+            
+        }) {
             button.image
                 .resizable()
                 .foregroundStyle(button.color)
