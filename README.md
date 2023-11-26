@@ -6,6 +6,7 @@ TinderSwipingAnimation is a library written using SwiftUI to simplify the implem
 ### Swift Package Manager
 * File > Swift Packages > Add Package Dependency
 * Add ```https://github.com/omarthamri/TinderSwipingAnimation.git```
+* Select "Up to Next Major" with "1.0.1"
 ## Usage
 ```
 import TinderSwipingAnimation
