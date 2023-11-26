@@ -21,11 +21,17 @@ import MyTinderSwipingAnimation
 ```
 import TinderSwipingAnimation
 let cards: [CardModel] = [
-CardModel(name: "Brie", imageName: "brie", age: 34),
-CardModel(name: "Scarlett", imageName: "scarlett", age: 38),
-CardModel(name: "Elizabeth", imageName: "elizabeth", age: 33)
-]
-TinderSwipingAnimation(cards: cards)
+        CardModel(name: "Brie", imageName: "brie", age: 34),
+        CardModel(name: "Scarlett", imageName: "scarlett", age: 38),
+        CardModel(name: "Elizabeth", imageName: "elizabeth", age: 33)
+        ]
+let buttons: [ButtonModel] = [
+            ButtonModel(image: Image(systemName: "xmark"), color: .pink),
+            ButtonModel(image: Image(systemName: "heart.fill"), color: .red),
+            ButtonModel(image: Image(systemName: "bubble.fill"), color: .purple),
+            ButtonModel(image: Image(systemName: "bolt.fill"), color: .blue)
+        ]
+TinderSwipingAnimation(cards: cards, buttons: buttons)
 ```
 ## Requirements
 * iOS 16.0+
