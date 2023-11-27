@@ -24,17 +24,19 @@ To resolve this issue, it is necessary to manually set the ```ENABLE_USER_SCRIPT
 ```
 import TinderSwipingAnimation
 let cards: [CardModel] = [
-        CardModel(name: "Brie", imageName: "brie", age: 34),
-        CardModel(name: "Scarlett", imageName: "scarlett", age: 38),
-        CardModel(name: "Elizabeth", imageName: "elizabeth", age: 33)
-        ]
+CardModel(name: "Brie", imageName: "brie", age: 34),
+CardModel(name: "Scarlett", imageName: "scarlett", age: 38),
+CardModel(name: "Elizabeth", imageName: "elizabeth", age: 33)
+]
 let buttons: [ButtonModel] = [
-            ButtonModel(image: Image(systemName: "xmark"), color: .pink),
-            ButtonModel(image: Image(systemName: "heart.fill"), color: .red),
-            ButtonModel(image: Image(systemName: "bubble.fill"), color: .purple),
-            ButtonModel(image: Image(systemName: "bolt.fill"), color: .blue)
-        ]
-TinderSwipingAnimation(cards: cards, buttons: buttons)
+ButtonModel(image: Image(systemName: "xmark"), color: .pink),
+ButtonModel(image: Image(systemName: "heart.fill"), color: .red),
+ButtonModel(image: Image(systemName: "bubble.fill"), color: .purple),
+ButtonModel(image: Image(systemName: "bolt.fill"), color: .blue)
+]
+TinderSwipingAnimation(cards: cards, buttons: buttons) { (cardModel,direction) in
+     print("Swiped \(cardModel.name) to \(direction.description)")
+}
 ```
 ## Requirements
 * iOS 16.0+
