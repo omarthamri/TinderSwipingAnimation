@@ -16,7 +16,9 @@ struct Card: View {
                 Image(card.imageName)
                     .resizable()
                     .frame(height: 410)
-                ButtonsView(buttons: buttons)
+                if buttons.count > 0 {
+                    ButtonsView(buttons: buttons)
+                }
             }
             .background(.white)
             .clipShape(RoundedRectangle(cornerRadius: 25))
