@@ -8,9 +8,9 @@
 import SwiftUI
 
 public struct CardModel {
-    var name: String
-    var imageName: String
-    var age: Int
+    public var name: String
+    public var imageName: String
+    public var age: Int
     public init(name: String, imageName: String, age: Int) {
         self.name = name
         self.imageName = imageName

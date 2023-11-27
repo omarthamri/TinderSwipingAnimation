@@ -11,7 +11,7 @@ public enum Direction {
     
     case right
     case left
-    var description: String {
+    public var description: String {
         switch self {
         case .right: return "right"
         case .left: return "left"
