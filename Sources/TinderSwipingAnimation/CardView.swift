@@ -12,6 +12,13 @@ struct CardView: View {
     @State var degree: [Double] = [0,0,0,0,0,0,0]
     var cards: [CardModel]
     var buttons: [ButtonModel]
+    @StateObject var viewModel: TinderViewModel
+    var onSwipe : (_ card: CardModel,_ direction: Direction) -> () = { (card,direction) in }
+        public init(cards: [CardModel], buttons: [ButtonModel],viewModel: TinderViewModel) {
+            self.cards = cards
+            self.buttons = buttons
+            self._viewModel = StateObject(wrappedValue: viewModel)
+        }
     var body: some View {
         ZStack {
             ForEach(0..<cards.count,id: \.self) { i in
@@ -33,6 +40,7 @@ struct CardView: View {
                                     if value.translation.width > 100 {
                                         self.x[i] = 500
                                         self.degree[i] = 12
+                                        viewModel.cardSwiped = (cards[i],Direction.right)
                                     }
                                     else {
                                         self.x[i] = 0
@@ -42,6 +50,7 @@ struct CardView: View {
                                     if value.translation.width < -100 {
                                         self.x[i] = -500
                                         self.degree[i] = -12
+                                        viewModel.cardSwiped = (cards[i],Direction.left)
                                     }
                                     else {
                                         self.x[i] = 0
