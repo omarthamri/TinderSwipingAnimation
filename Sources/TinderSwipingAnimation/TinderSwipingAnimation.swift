@@ -33,4 +33,13 @@ public struct TinderSwipingAnimation: View {
             CardView(cards: cards, buttons: buttons,viewModel: viewModel)
         }
     }
+    
+    
+}
+
+
+extension TinderSwipingAnimation {
+    public func tinderSwipingStyle(titleColor: Color = .white, subtitleColor: Color = .white,titleFont: Font = .title, subtitleFont: Font = .body) -> some View {
+        self.modifier(TinderSwipingAnimationViewModifier(titleColor: titleColor, subtitleColor: subtitleColor,titleFont: titleFont, subtitleFont: subtitleFont,viewModel: viewModel))
+    }
 }

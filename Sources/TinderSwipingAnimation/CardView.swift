@@ -22,7 +22,7 @@ struct CardView: View {
     var body: some View {
         ZStack {
             ForEach(0..<cards.count,id: \.self) { i in
-                Card(card: cards[i], buttons: buttons)
+                Card(card: cards[i], buttons: buttons, viewModel: viewModel)
                     .offset(x: self.x[i])
                     .rotationEffect(.init(degrees: degree[i]))
                     .gesture(DragGesture()
