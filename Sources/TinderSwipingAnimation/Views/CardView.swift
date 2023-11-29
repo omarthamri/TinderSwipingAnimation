@@ -30,9 +30,13 @@ struct CardView: View {
                             if value.translation.width > 0 {
                                 self.x[i] = value.translation.width
                                 self.degree[i] = 8
+                                viewModel.cards[i].thumbsUpOpacity = 1
+                                viewModel.cards[i].thumbsDownOpacity = 0
                             } else {
                                 self.x[i] = value.translation.width
                                 self.degree[i] = -8
+                                viewModel.cards[i].thumbsUpOpacity = 0
+                                viewModel.cards[i].thumbsDownOpacity = 1
                             }
                         })
                             .onEnded({ (value) in
@@ -41,20 +45,28 @@ struct CardView: View {
                                         self.x[i] = 500
                                         self.degree[i] = 12
                                         viewModel.cardSwiped = (cards[i],Direction.right)
+                                        viewModel.cards[i].thumbsUpOpacity = 0
+                                        viewModel.cards[i].thumbsDownOpacity = 0
                                     }
                                     else {
                                         self.x[i] = 0
                                         self.degree[i] = 0
+                                        viewModel.cards[i].thumbsUpOpacity = 0
+                                        viewModel.cards[i].thumbsDownOpacity = 0
                                     }
                                 } else {
                                     if value.translation.width < -100 {
                                         self.x[i] = -500
                                         self.degree[i] = -12
                                         viewModel.cardSwiped = (cards[i],Direction.left)
+                                        viewModel.cards[i].thumbsUpOpacity = 0
+                                        viewModel.cards[i].thumbsDownOpacity = 0
                                     }
                                     else {
                                         self.x[i] = 0
                                         self.degree[i] = 0
+                                        viewModel.cards[i].thumbsUpOpacity = 0
+                                        viewModel.cards[i].thumbsDownOpacity = 0
                                     }
                                 }
                             })

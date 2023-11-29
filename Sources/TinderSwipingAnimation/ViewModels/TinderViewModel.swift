@@ -14,6 +14,6 @@ class TinderViewModel: ObservableObject {
     @Published var subtitleColor: Color = .white
     @Published var titleFont: Font = .title
     @Published var subtitleFont: Font = .body
-    
+    @Published var cards: [CardModel] = []
     
 }

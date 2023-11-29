@@ -19,6 +19,7 @@ public struct TinderSwipingAnimation: View {
             self.cards = cards
             self.buttons = buttons
             self.onSwipe = onSwipe
+            viewModel.cards = cards
             viewModel.$cardSwiped.sink { [self] (card,direction) in
                 guard let card = card, let direction = direction else { return }
                 self.onSwipe(card,direction)
