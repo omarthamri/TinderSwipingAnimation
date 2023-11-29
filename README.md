@@ -1,16 +1,16 @@
 # TinderSwipingAnimation
 TinderSwipingAnimation is an easy to use library written using SwiftUI to simplify the implementation of the tinder swipe animation.
 ## Demo
-![Simulator Screen Recording - iPhone 15 Pro - 2023-11-25 at 23 55 45](https://github.com/omarthamri/TinderSwipingAnimation/assets/39087448/e9d46a1d-f2a1-489b-98df-51b509d02adf)
+![new_recording](https://github.com/omarthamri/TinderSwipingAnimation/assets/39087448/11b7ab0c-c467-41f5-ad6a-b810cce78478)
 ## Installation
 ### Swift Package Manager
 * File > Swift Packages > Add Package Dependency
 * Add ```https://github.com/omarthamri/TinderSwipingAnimation.git```
-* Select "Up to Next Major" with "1.1"
+* Select "Up to Next Major" with "1.2"
 ### Cocoapods
 ```
 target 'MyApp' do
-  pod 'MyTinderSwipingAnimation', '~> 1.1'
+  pod 'MyTinderSwipingAnimation', '~> 1.2'
 end
 ```
 The import statement in this case will be
@@ -21,7 +21,7 @@ Xcode 15 made a significant change by setting the default value of the ```ENABLE
 
 To resolve this issue, it is necessary to manually set the ```ENABLE_USER_SCRIPT_SANDBOXING setting to NO``` in Build Settings.
 ## Usage
-in the beginning of your view add the code below:
+in the top of your view file add the code below:
 ```
 import TinderSwipingAnimation
 ```
