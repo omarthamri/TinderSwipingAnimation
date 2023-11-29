@@ -10,6 +10,7 @@ import SwiftUI
 struct CardView: View {
     @State var x: [CGFloat] = [0,0,0,0,0,0,0]
     @State var degree: [Double] = [0,0,0,0,0,0,0]
+    @State var offset: CGFloat = 0.0
     var cards: [CardModel]
     var buttons: [ButtonModel]
     @StateObject var viewModel: TinderViewModel
@@ -29,11 +30,13 @@ struct CardView: View {
                         .onChanged({ (value) in
                             if value.translation.width > 0 {
                                 self.x[i] = value.translation.width
+                                self.offset = value.translation.width
                                 self.degree[i] = 8
                                 viewModel.cards[i].thumbsUpOpacity = 1
                                 viewModel.cards[i].thumbsDownOpacity = 0
                             } else {
                                 self.x[i] = value.translation.width
+                                self.offset = value.translation.width
                                 self.degree[i] = -8
                                 viewModel.cards[i].thumbsUpOpacity = 0
                                 viewModel.cards[i].thumbsDownOpacity = 1
@@ -43,6 +46,7 @@ struct CardView: View {
                                 if value.translation.width > 0 {
                                     if value.translation.width > 100 {
                                         self.x[i] = 500
+                                        self.offset = 500
                                         self.degree[i] = 12
                                         viewModel.cardSwiped = (cards[i],Direction.right)
                                         viewModel.cards[i].thumbsUpOpacity = 0
@@ -50,6 +54,7 @@ struct CardView: View {
                                     }
                                     else {
                                         self.x[i] = 0
+                                        self.offset = 0
                                         self.degree[i] = 0
                                         viewModel.cards[i].thumbsUpOpacity = 0
                                         viewModel.cards[i].thumbsDownOpacity = 0
@@ -57,6 +62,7 @@ struct CardView: View {
                                 } else {
                                     if value.translation.width < -100 {
                                         self.x[i] = -500
+                                        self.offset = -500
                                         self.degree[i] = -12
                                         viewModel.cardSwiped = (cards[i],Direction.left)
                                         viewModel.cards[i].thumbsUpOpacity = 0
@@ -64,6 +70,7 @@ struct CardView: View {
                                     }
                                     else {
                                         self.x[i] = 0
+                                        self.offset = 0
                                         self.degree[i] = 0
                                         viewModel.cards[i].thumbsUpOpacity = 0
                                         viewModel.cards[i].thumbsDownOpacity = 0
@@ -74,6 +81,6 @@ struct CardView: View {
             }
         }
         .padding()
-        .animation(.default)
+        .animation(.default,value: offset)
     }
 }

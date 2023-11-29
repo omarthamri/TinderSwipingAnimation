@@ -28,11 +28,7 @@ public struct TinderSwipingAnimation: View {
         }
 
     public var body: some View {
-        ZStack{
-            Color.black.opacity(0.05)
-                .ignoresSafeArea(edges: .all)
             CardView(cards: cards, buttons: buttons,viewModel: viewModel)
-        }
     }
     
     
