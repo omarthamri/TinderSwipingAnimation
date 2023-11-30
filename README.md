@@ -65,5 +65,7 @@ TinderSwipingAnimation(cards: cards, buttons: buttons) { (cardModel,direction) i
 ```
 ## Requirements
 * iOS 17.0+
+## Author
+Omar Thamri, <a href="https://twitter.com/ThamriOmar">@ThamriOmar</a>
 ## License
 TinderSwipingAnimation is released under the MIT license. See LICENSE for details.
