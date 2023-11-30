@@ -12,12 +12,14 @@ public struct TinderSwipingAnimation: View {
     
     var cards: [CardModel]
     var buttons: [ButtonModel]
+    var options: [String: Any] = ["orientation" : TextOrientation.vertical]
     var onSwipe: (_ cardModel: CardModel,_ direction: Direction) -> () = {_,_  in }
         private var subscriptions: Set<AnyCancellable> = []
         private var viewModel = TinderViewModel()
-        public init(cards: [CardModel], buttons: [ButtonModel],onSwipe: @escaping (_ cardModel: CardModel,_ direction: Direction) -> () ) {
+        public init(cards: [CardModel], buttons: [ButtonModel],onSwipe: @escaping (_ cardModel: CardModel,_ direction: Direction) -> (),options: [String: Any] = ["orientation" : TextOrientation.vertical] ) {
             self.cards = cards
             self.buttons = buttons
+            self.options = options
             self.onSwipe = onSwipe
             viewModel.cards = cards
             viewModel.$cardSwiped.sink { [self] (card,direction) in
@@ -28,7 +30,10 @@ public struct TinderSwipingAnimation: View {
         }
 
     public var body: some View {
-            CardView(cards: cards, buttons: buttons,viewModel: viewModel)
+        guard let orientation = options["orientation"] as? TextOrientation else {
+                    return CardView(cards: cards, buttons: buttons,viewModel: viewModel, orientation: .vertical )
+                }
+                return CardView(cards: cards, buttons: buttons,viewModel: viewModel, orientation: orientation )
     }
     
     

@@ -14,12 +14,14 @@ struct CardView: View {
     @State var offset: CGFloat = 0.0
     var cards: [CardModel]
     var buttons: [ButtonModel]
+    var orientation: TextOrientation
     var subscriptions: Set<AnyCancellable> = []
     @StateObject var viewModel: TinderViewModel
     var onSwipe : (_ card: CardModel,_ direction: Direction) -> () = { (card,direction) in }
-        public init(cards: [CardModel], buttons: [ButtonModel],viewModel: TinderViewModel) {
+        public init(cards: [CardModel], buttons: [ButtonModel],viewModel: TinderViewModel,orientation: TextOrientation) {
             self.cards = cards
             self.buttons = buttons
+            self.orientation = orientation
             self._viewModel = StateObject(wrappedValue: viewModel)
             viewModel.$goRight.sink { _ in
                     }
@@ -31,7 +33,7 @@ struct CardView: View {
     var body: some View {
         ZStack {
             ForEach(0..<cards.count,id: \.self) { i in
-                Card(card: cards[i], buttons: buttons, viewModel: viewModel)
+                Card(card: cards[i], buttons: buttons, viewModel: viewModel, orientation: orientation)
                     .offset(x: self.x[i])
                     .rotationEffect(.init(degrees: degree[i]))
                     .onChange(of: viewModel.goRight || viewModel.goLeft) {

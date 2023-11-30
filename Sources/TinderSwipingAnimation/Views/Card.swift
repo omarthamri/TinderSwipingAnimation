@@ -11,11 +11,13 @@ import Combine
 struct Card: View {
     var card: CardModel
     var buttons: [ButtonModel]
+    var orientation: TextOrientation
     var viewModel: TinderViewModel
     var subscriptions: Set<AnyCancellable> = []
-    init(card: CardModel, buttons: [ButtonModel], viewModel: TinderViewModel) {
+    init(card: CardModel, buttons: [ButtonModel], viewModel: TinderViewModel,orientation: TextOrientation) {
             self.card = card
             self.buttons = buttons
+            self.orientation = orientation
             self.viewModel = viewModel
             self.viewModel.$titleColor.combineLatest(viewModel.$subtitleColor).sink { (_,_) in
             }
@@ -58,18 +60,34 @@ struct Card: View {
             }
             .background(.white)
             .clipShape(RoundedRectangle(cornerRadius: 25))
-            VStack(alignment: .leading,spacing: 12) {
-                Text(card.name)
-                    .font(viewModel.titleFont)
-                    .foregroundStyle(viewModel.titleColor)
-                    .fontWeight(.bold)
-                Text("\(card.age)")
-                    .font(viewModel.subtitleFont)
-                    .foregroundStyle(viewModel.subtitleColor)
-                    .fontWeight(.bold)
-            }
-            .padding(.bottom,100)
-            .padding(.leading,10)
+            if orientation == .vertical {
+                            VStack(alignment: .leading,spacing: 12) {
+                                Text(card.name)
+                                    .font(viewModel.titleFont)
+                                    .foregroundStyle(viewModel.titleColor)
+                                    .fontWeight(.bold)
+                                Text("\(card.age)")
+                                    .font(viewModel.subtitleFont)
+                                    .foregroundStyle(viewModel.subtitleColor)
+                                    .fontWeight(.bold)
+                            }
+                            .padding(.bottom,buttons.count != 0 ? 100 : 15)
+                            .padding(.leading,10)
+                        } else {
+                            HStack(alignment: .bottom) {
+                                Text(card.name)
+                                    .font(viewModel.titleFont)
+                                    .foregroundStyle(viewModel.titleColor)
+                                    .fontWeight(.bold)
+                                Spacer()
+                                Text("\(card.age)")
+                                    .font(viewModel.subtitleFont)
+                                    .foregroundStyle(viewModel.subtitleColor)
+                                    .fontWeight(.bold)
+                            }
+                            .padding(.bottom,buttons.count != 0 ? 100 : 15)
+                            .padding(.horizontal,10)
+                        }
         }
         
     }
