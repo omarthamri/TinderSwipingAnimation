@@ -6,11 +6,11 @@ TinderSwipingAnimation is an easy to use library written using SwiftUI to simpli
 ### Swift Package Manager
 * File > Swift Packages > Add Package Dependency
 * Add ```https://github.com/omarthamri/TinderSwipingAnimation.git```
-* Select "Up to Next Major" with "1.6"
+* Select "Up to Next Major" with "1.7"
 ### Cocoapods
 ```
 target 'MyApp' do
-  pod 'MyTinderSwipingAnimation', '~> 1.6'
+  pod 'MyTinderSwipingAnimation', '~> 1.7'
 end
 ```
 The import statement in this case will be
@@ -46,14 +46,16 @@ struct ContentView: View {
         }
 }
 ```
-To Perform a swipe using buttons you just need to pass the action to do in the ButtonModel initializer.There are the following predefined actions ```.goLeft``` or ```.goRight``` or ```.none```. By default buttons are create with .none action.
+To Perform a swipe using buttons you just need to pass the action to do in the ButtonModel initializer.There are the following predefined actions ```.goLeft``` or ```.goRight``` or ```.goTop``` or ```.goBottom``` or ```.none```. By default buttons are create with .none action.
 ```
-let buttons: [ButtonModel] = [
-            ButtonModel(image: Image(systemName: "xmark"), color: .pink,action: .goLeft), // swipe left when button clicked
-            ButtonModel(image: Image(systemName: "heart.fill"), color: .red,action: .goRight), // swipe right when button clicked
+let buttons: [ButtonModel] = [ // those are the buttons to be shown in the card
+        ButtonModel(image: Image(systemName: "xmark"), color: .pink,action: .goLeft), // swipe left when button clicked
+        ButtonModel(image: Image(systemName: "heart.fill"), color: .red,action: .goTop), // swipe top when button clicked
+        ButtonModel(image: Image(systemName: "bubble.fill"), color: .purple,action: .goBottom), // swipe bottom when button clicked
+            ButtonModel(image: Image(systemName: "bolt.fill"), color: .blue,action: .goRight) // swipe right when button clicked
         ]
 ```
-<Img width = 150 height = 250 src= "https://github.com/omarthamri/TinderSwipingAnimation/assets/39087448/e774c4f6-10de-48b6-bdc8-4169410b5c23">
+<Img width = 150 height = 250 src= "https://github.com/omarthamri/TinderSwipingAnimation/assets/39087448/f7a377a2-2068-4338-95d0-036942af33ae">
 
 
 If you want to modify the colors or fonts in the card
@@ -63,7 +65,7 @@ TinderSwipingAnimation(cards: cards, buttons: buttons) { (cardModel,direction) i
         }
         .tinderSwipingStyle(titleColor: .red, subtitleColor: .red, titleFont: .largeTitle, subtitleFont: .largeTitle)
 ```
-If you want to change the orientation of the text inside your card you can use options with the key orientation. we got two orientations options .horizontal and .vertical. By default the text orientation inside the card is .vertical.
+If you want to change the orientation of the text inside your card you can use options with the key orientation. we got two orientations options ```.horizontal``` and ```.vertical```. By default the text orientation inside the card is .vertical.
 ```
 TinderSwipingAnimation(
             cards: cards,
