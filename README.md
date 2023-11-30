@@ -10,7 +10,7 @@ TinderSwipingAnimation is an easy to use library written using SwiftUI to simpli
 ### Cocoapods
 ```
 target 'MyApp' do
-  pod 'MyTinderSwipingAnimation', '~> 1.5'
+  pod 'MyTinderSwipingAnimation', '~> 1.6'
 end
 ```
 The import statement in this case will be
