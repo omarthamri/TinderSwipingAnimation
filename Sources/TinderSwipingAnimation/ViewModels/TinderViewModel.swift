@@ -17,4 +17,6 @@ class TinderViewModel: ObservableObject {
     @Published var cards: [CardModel] = []
     @Published var goRight: Bool = false
     @Published var goLeft: Bool = false
+    @Published var goTop: Bool = false
+    @Published var goBottom: Bool = false
 }

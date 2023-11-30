@@ -21,9 +21,9 @@ struct CustomButton: View {
                    case .goLeft:
                        viewModel.goLeft = true
                    case .goTop:
-                       break
+                       viewModel.goTop = true
                    case .goBottom:
-                       break
+                       viewModel.goBottom = true
                    }
         }) {
             button.image

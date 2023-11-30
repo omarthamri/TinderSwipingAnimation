@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MyTinderSwipingAnimation'
-  s.version          = '1.6'
+  s.version          = '1.7'
   s.summary          = 'TinderSwipingAnimation is a library written using SwiftUI to simplify the implementation of the tinder swipe animation.'
 
 # This description is used to generate tags and improve search results.

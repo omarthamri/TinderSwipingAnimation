@@ -9,8 +9,9 @@ import SwiftUI
 import Combine
 
 struct CardView: View {
-    @State var x: [CGFloat] = [0,0,0,0,0,0,0]
-    @State var degree: [Double] = [0,0,0,0,0,0,0]
+    @State var x: [CGFloat] = [0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+    @State var y: [CGFloat] = [0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+    @State var degree: [Double] = [0,0,0,0,0,0,0,0,0,0,0,0,0,0]
     @State var offset: CGFloat = 0.0
     var cards: [CardModel]
     var buttons: [ButtonModel]
@@ -26,7 +27,13 @@ struct CardView: View {
             viewModel.$goRight.sink { _ in
                     }
                     .store(in: &subscriptions)
-                    viewModel.$goLeft.sink { _ in
+            viewModel.$goLeft.sink { _ in
+                    }
+                    .store(in: &subscriptions)
+            viewModel.$goTop.sink { _ in
+                    }
+                    .store(in: &subscriptions)
+            viewModel.$goBottom.sink { _ in
                     }
                     .store(in: &subscriptions)
         }
@@ -34,10 +41,10 @@ struct CardView: View {
         ZStack {
             ForEach(0..<cards.count,id: \.self) { i in
                 Card(card: cards[i], buttons: buttons, viewModel: viewModel, orientation: orientation)
-                    .offset(x: self.x[i])
+                    .offset(x: self.x[i],y: y[i])
                     .rotationEffect(.init(degrees: degree[i]))
-                    .onChange(of: viewModel.goRight || viewModel.goLeft) {
-                                            if viewModel.goRight && abs(degree[i]) != 12 {
+                    .onChange(of: viewModel.goRight || viewModel.goLeft || viewModel.goBottom || viewModel.goTop) {
+                                            if viewModel.goRight && abs(degree[i]) != 12 && abs(degree[i]) != 1 {
                                                 withAnimation(.default) {
                                                     viewModel.goRight = false
                                                     self.x[i] = 500
@@ -47,13 +54,33 @@ struct CardView: View {
                                                     viewModel.cards[i].thumbsUpOpacity = 0
                                                     viewModel.cards[i].thumbsDownOpacity = 0
                                                 }
-                                            } else if viewModel.goLeft && abs(degree[i]) != 12 {
+                                            } else if viewModel.goLeft && abs(degree[i]) != 12 && abs(degree[i]) != 1  {
                                                 withAnimation(.default) {
                                                     viewModel.goLeft = false
                                                     self.x[i] = -500
                                                     self.offset = -500
                                                     self.degree[i] = -12
                                                     viewModel.cardSwiped = (cards[i],Direction.left)
+                                                    viewModel.cards[i].thumbsUpOpacity = 0
+                                                    viewModel.cards[i].thumbsDownOpacity = 0
+                                                }
+                                            } else if viewModel.goTop && abs(degree[i]) != 1 && abs(degree[i]) != 12{
+                                                withAnimation(.default) {
+                                                    viewModel.goTop = false
+                                                    self.y[i] = 750
+                                                    self.offset = 750
+                                                    self.degree[i] = 1
+                                                    viewModel.cardSwiped = (cards[i],Direction.top)
+                                                    viewModel.cards[i].thumbsUpOpacity = 0
+                                                    viewModel.cards[i].thumbsDownOpacity = 0
+                                                }
+                                            } else if viewModel.goBottom && abs(degree[i]) != 1 && abs(degree[i]) != 12 {
+                                                withAnimation(.default) {
+                                                    viewModel.goBottom = false
+                                                    self.y[i] = -750
+                                                    self.offset = -750
+                                                    self.degree[i] = -1
+                                                    viewModel.cardSwiped = (cards[i],Direction.bottom)
                                                     viewModel.cards[i].thumbsUpOpacity = 0
                                                     viewModel.cards[i].thumbsDownOpacity = 0
                                                 }
