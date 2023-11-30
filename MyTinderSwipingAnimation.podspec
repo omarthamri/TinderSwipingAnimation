@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MyTinderSwipingAnimation'
-  s.version          = '1.3'
+  s.version          = '1.4'
   s.summary          = 'TinderSwipingAnimation is a library written using SwiftUI to simplify the implementation of the tinder swipe animation.'
 
 # This description is used to generate tags and improve search results.
@@ -28,7 +28,7 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/omarthamri/TinderSwipingAnimation.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '16.0'
+  s.ios.deployment_target = '17.0'
 
   s.source_files = 'Sources/TinderSwipingAnimation/**/*'
   

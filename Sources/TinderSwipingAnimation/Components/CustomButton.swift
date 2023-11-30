@@ -10,9 +10,21 @@ import SwiftUI
 struct CustomButton: View {
     
     var button: ButtonModel
+    var viewModel: TinderViewModel
     var body: some View {
         Button(action: {
-            
+            switch button.action {
+                   case .none:
+                       break
+                   case .goRight:
+                       viewModel.goRight = true
+                   case .goLeft:
+                       viewModel.goLeft = true
+                   case .goTop:
+                       break
+                   case .goBottom:
+                       break
+                   }
         }) {
             button.image
                 .resizable()

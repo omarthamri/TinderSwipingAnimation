@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 struct CardView: View {
     @State var x: [CGFloat] = [0,0,0,0,0,0,0]
@@ -13,12 +14,19 @@ struct CardView: View {
     @State var offset: CGFloat = 0.0
     var cards: [CardModel]
     var buttons: [ButtonModel]
+    var subscriptions: Set<AnyCancellable> = []
     @StateObject var viewModel: TinderViewModel
     var onSwipe : (_ card: CardModel,_ direction: Direction) -> () = { (card,direction) in }
         public init(cards: [CardModel], buttons: [ButtonModel],viewModel: TinderViewModel) {
             self.cards = cards
             self.buttons = buttons
             self._viewModel = StateObject(wrappedValue: viewModel)
+            viewModel.$goRight.sink { _ in
+                    }
+                    .store(in: &subscriptions)
+                    viewModel.$goLeft.sink { _ in
+                    }
+                    .store(in: &subscriptions)
         }
     var body: some View {
         ZStack {
@@ -26,6 +34,29 @@ struct CardView: View {
                 Card(card: cards[i], buttons: buttons, viewModel: viewModel)
                     .offset(x: self.x[i])
                     .rotationEffect(.init(degrees: degree[i]))
+                    .onChange(of: viewModel.goRight || viewModel.goLeft) {
+                                            if viewModel.goRight && abs(degree[i]) != 12 {
+                                                withAnimation(.default) {
+                                                    viewModel.goRight = false
+                                                    self.x[i] = 500
+                                                    self.offset = 500
+                                                    self.degree[i] = 12
+                                                    viewModel.cardSwiped = (cards[i],Direction.right)
+                                                    viewModel.cards[i].thumbsUpOpacity = 0
+                                                    viewModel.cards[i].thumbsDownOpacity = 0
+                                                }
+                                            } else if viewModel.goLeft && abs(degree[i]) != 12 {
+                                                withAnimation(.default) {
+                                                    viewModel.goLeft = false
+                                                    self.x[i] = -500
+                                                    self.offset = -500
+                                                    self.degree[i] = -12
+                                                    viewModel.cardSwiped = (cards[i],Direction.left)
+                                                    viewModel.cards[i].thumbsUpOpacity = 0
+                                                    viewModel.cards[i].thumbsDownOpacity = 0
+                                                }
+                                            }
+                                        }
                     .gesture(DragGesture()
                         .onChanged({ (value) in
                             if value.translation.width > 0 {

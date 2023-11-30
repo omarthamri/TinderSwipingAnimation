@@ -15,5 +15,6 @@ class TinderViewModel: ObservableObject {
     @Published var titleFont: Font = .title
     @Published var subtitleFont: Font = .body
     @Published var cards: [CardModel] = []
-    
+    @Published var goRight: Bool = false
+    @Published var goLeft: Bool = false
 }

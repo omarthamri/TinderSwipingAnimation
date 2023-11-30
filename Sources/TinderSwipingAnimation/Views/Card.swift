@@ -53,7 +53,7 @@ struct Card: View {
                                     .padding(.top, 100)
                                 }
                 if buttons.count > 0 {
-                    ButtonsView(buttons: buttons)
+                    ButtonsView(buttons: buttons, viewModel: viewModel)
                 }
             }
             .background(.white)
