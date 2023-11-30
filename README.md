@@ -6,11 +6,11 @@ TinderSwipingAnimation is an easy to use library written using SwiftUI to simpli
 ### Swift Package Manager
 * File > Swift Packages > Add Package Dependency
 * Add ```https://github.com/omarthamri/TinderSwipingAnimation.git```
-* Select "Up to Next Major" with "1.3"
+* Select "Up to Next Major" with "1.5"
 ### Cocoapods
 ```
 target 'MyApp' do
-  pod 'MyTinderSwipingAnimation', '~> 1.3'
+  pod 'MyTinderSwipingAnimation', '~> 1.5'
 end
 ```
 The import statement in this case will be
@@ -46,6 +46,16 @@ struct ContentView: View {
         }
 }
 ```
+To Perform a swipe using buttons you just need to pass the action to do in the ButtonModel initializer.There are the following predefined actions ```.goLeft``` or ```.goRight``` or ```.none```. By default buttons are create with .none action.
+```
+let buttons: [ButtonModel] = [
+            ButtonModel(image: Image(systemName: "xmark"), color: .pink,action: .goLeft), // swipe left when button clicked
+            ButtonModel(image: Image(systemName: "heart.fill"), color: .red,action: .goRight), // swipe right when button clicked
+        ]
+```
+<Img width = 150 height = 250 src= "https://github.com/omarthamri/TinderSwipingAnimation/assets/39087448/e774c4f6-10de-48b6-bdc8-4169410b5c23">
+
+
 If you want to modify the colors or fonts in the card
 ```
 TinderSwipingAnimation(cards: cards, buttons: buttons) { (cardModel,direction) in // Closure to be called when a card is swiped.
@@ -54,6 +64,6 @@ TinderSwipingAnimation(cards: cards, buttons: buttons) { (cardModel,direction) i
         .tinderSwipingStyle(titleColor: .red, subtitleColor: .red, titleFont: .largeTitle, subtitleFont: .largeTitle)
 ```
 ## Requirements
-* iOS 16.0+
+* iOS 17.0+
 ## License
 TinderSwipingAnimation is released under the MIT license. See LICENSE for details.
