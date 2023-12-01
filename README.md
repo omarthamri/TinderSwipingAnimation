@@ -55,7 +55,7 @@ let buttons: [ButtonModel] = [ // those are the buttons to be shown in the card
             ButtonModel(image: Image(systemName: "bolt.fill"), color: .blue,action: .goRight) // swipe right when button clicked
         ]
 ```
-<Img width = 150 height = 250 src= "https://github.com/omarthamri/TinderSwipingAnimation/assets/39087448/f7a377a2-2068-4338-95d0-036942af33ae">
+<Img width = 150 height = 250 src= "https://github.com/omarthamri/TinderSwipingAnimation/assets/39087448/b32b9ce4-e631-4cca-9df0-bb2bae63b8fd">
 
 
 If you want to modify the colors or fonts in the card
