@@ -9,9 +9,9 @@ import SwiftUI
 import Combine
 
 struct CardView: View {
-    @State var x: [CGFloat] = [0,0,0,0,0,0,0,0,0,0,0,0,0,0]
-    @State var y: [CGFloat] = [0,0,0,0,0,0,0,0,0,0,0,0,0,0]
-    @State var degree: [Double] = [0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+    @State var x: [CGFloat]
+    @State var y: [CGFloat]
+    @State var degree: [Double]
     @State var offset: CGFloat = 0.0
     var cards: [CardModel]
     var buttons: [ButtonModel]
@@ -22,6 +22,9 @@ struct CardView: View {
     var onSwipe : (_ card: CardModel,_ direction: Direction) -> () = { (card,direction) in }
         public init(cards: [CardModel], buttons: [ButtonModel],viewModel: TinderViewModel,orientation: TextOrientation,backgroundColor: Color) {
             self.cards = cards
+            self._x = State(initialValue: Array(repeating: 0, count: cards.count))
+            self._y = State(initialValue: Array(repeating: 0, count: cards.count))
+            self._degree = State(initialValue: Array(repeating: 0, count: cards.count))
             self.buttons = buttons
             self.orientation = orientation
             self.backgroundColor = backgroundColor
