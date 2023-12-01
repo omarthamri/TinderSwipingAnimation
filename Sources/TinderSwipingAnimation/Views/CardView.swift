@@ -67,8 +67,8 @@ struct CardView: View {
                                             } else if viewModel.goTop && abs(degree[i]) != 1 && abs(degree[i]) != 12{
                                                 withAnimation(.default) {
                                                     viewModel.goTop = false
-                                                    self.y[i] = 750
-                                                    self.offset = 750
+                                                    self.y[i] = 800
+                                                    self.offset = 800
                                                     self.degree[i] = 1
                                                     viewModel.cardSwiped = (cards[i],Direction.top)
                                                     viewModel.cards[i].thumbsUpOpacity = 0
@@ -77,8 +77,8 @@ struct CardView: View {
                                             } else if viewModel.goBottom && abs(degree[i]) != 1 && abs(degree[i]) != 12 {
                                                 withAnimation(.default) {
                                                     viewModel.goBottom = false
-                                                    self.y[i] = -750
-                                                    self.offset = -750
+                                                    self.y[i] = -800
+                                                    self.offset = -800
                                                     self.degree[i] = -1
                                                     viewModel.cardSwiped = (cards[i],Direction.bottom)
                                                     viewModel.cards[i].thumbsUpOpacity = 0
