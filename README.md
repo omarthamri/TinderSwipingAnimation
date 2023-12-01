@@ -2,6 +2,7 @@
 TinderSwipingAnimation is an easy to use library written using SwiftUI to simplify the implementation of the tinder swipe animation.
 ## Demo
 ![Simulator Screen Recording - iPhone 15 Pro - 2023-12-02 at 00 28 02](https://github.com/omarthamri/TinderSwipingAnimation/assets/39087448/ab0097a6-5f4b-4bc0-8e56-6c0d57d68919)
+## Installation
 ### Swift Package Manager
 * File > Swift Packages > Add Package Dependency
 * Add ```https://github.com/omarthamri/TinderSwipingAnimation.git```
