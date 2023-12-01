@@ -6,11 +6,11 @@ TinderSwipingAnimation is an easy to use library written using SwiftUI to simpli
 ### Swift Package Manager
 * File > Swift Packages > Add Package Dependency
 * Add ```https://github.com/omarthamri/TinderSwipingAnimation.git```
-* Select "Up to Next Major" with "1.7.3"
+* Select "Up to Next Major" with "1.8"
 ### Cocoapods
 ```
 target 'MyApp' do
-  pod 'MyTinderSwipingAnimation', '~> 1.7'
+  pod 'MyTinderSwipingAnimation', '~> 1.8'
 end
 ```
 The import statement in this case will be
@@ -57,6 +57,11 @@ let buttons: [ButtonModel] = [ // those are the buttons to be shown in the card
 ```
 <Img width = 150 height = 250 src= "https://github.com/omarthamri/TinderSwipingAnimation/assets/39087448/b32b9ce4-e631-4cca-9df0-bb2bae63b8fd">
 
+To return the most recently swiped card to the top of your card stack you just need to pass the action ```.undo``` in the ButtonModel initializer.
+```
+ButtonModel(image: Image(systemName: "gobackward"), color: .pink,action: .undo)
+```
+<Img width = 150 height = 250 src="https://github.com/omarthamri/TinderSwipingAnimation/assets/39087448/ba4e8869-fbc2-49bb-a33f-dbb983b27caf">
 
 If you want to modify the colors or fonts in the card
 ```
@@ -79,7 +84,6 @@ TinderSwipingAnimation(
                     ])
 ```
 <Img width = 150 height = 250 src= "https://github.com/omarthamri/TinderSwipingAnimation/assets/39087448/c40f2319-bd8b-4350-86de-a145dbeb5d9a">
-
 
 ## Requirements
 * iOS 17.0+
