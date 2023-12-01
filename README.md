@@ -6,7 +6,7 @@ TinderSwipingAnimation is an easy to use library written using SwiftUI to simpli
 ### Swift Package Manager
 * File > Swift Packages > Add Package Dependency
 * Add ```https://github.com/omarthamri/TinderSwipingAnimation.git```
-* Select "Up to Next Major" with "1.7.2"
+* Select "Up to Next Major" with "1.7.3"
 ### Cocoapods
 ```
 target 'MyApp' do
@@ -29,9 +29,9 @@ A basic implementation example would be like this:
 ```
 struct ContentView: View {
     let cards: [CardModel] = [ // This is the data to be shown in Card
-        CardModel(name: "Brie", imageName: "brie", age: 34),
-        CardModel(name: "Scarlett", imageName: "scarlett", age: 38),
-        CardModel(name: "Elizabeth", imageName: "elizabeth", age: 33)
+        CardModel(name: "Brie", imageName: "brie", age: "34"),
+        CardModel(name: "Scarlett", imageName: "scarlett", age: "38"),
+        CardModel(name: "Elizabeth", imageName: "elizabeth", age: "33")
     ]
     let buttons: [ButtonModel] = [ // those are the buttons to be shown in the card
         ButtonModel(image: Image(systemName: "xmark"), color: .pink),
