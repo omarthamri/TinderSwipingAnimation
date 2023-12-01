@@ -66,7 +66,7 @@ TinderSwipingAnimation(cards: cards, buttons: buttons) { (cardModel,direction) i
         .tinderSwipingStyle(titleColor: .red, subtitleColor: .red, titleFont: .largeTitle, subtitleFont: .largeTitle)
 ```
 If you want to change the orientation of the text inside your card you can use options with the key orientation. we got two orientations options ```.horizontal``` and ```.vertical```. By default the text orientation inside the card is ```.vertical```.
-You can also use options with the key ```backgroundColor``` to change the background color of the card.
+You can also use options with the key ```backgroundColor``` to change the background color of the card. By default the background color of the card is white.
 ```
 TinderSwipingAnimation(
                     cards: cards,
