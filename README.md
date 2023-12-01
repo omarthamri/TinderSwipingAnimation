@@ -1,16 +1,15 @@
 # TinderSwipingAnimation
 TinderSwipingAnimation is an easy to use library written using SwiftUI to simplify the implementation of the tinder swipe animation.
 ## Demo
-![new_recording](https://github.com/omarthamri/TinderSwipingAnimation/assets/39087448/11b7ab0c-c467-41f5-ad6a-b810cce78478)
-## Installation
+## Installation![Simulator Screen Recording - iPhone 15 Pro - 2023-12-02 at 00 09 55](https://github.com/omarthamri/TinderSwipingAnimation/assets/39087448/de5ab137-23bc-468e-b9fa-f8160364fde9)
 ### Swift Package Manager
 * File > Swift Packages > Add Package Dependency
 * Add ```https://github.com/omarthamri/TinderSwipingAnimation.git```
-* Select "Up to Next Major" with "1.8"
+* Select "Up to Next Major" with "1.9"
 ### Cocoapods
 ```
 target 'MyApp' do
-  pod 'MyTinderSwipingAnimation', '~> 1.8'
+  pod 'MyTinderSwipingAnimation', '~> 1.9'
 end
 ```
 The import statement in this case will be
@@ -52,7 +51,7 @@ let buttons: [ButtonModel] = [ // those are the buttons to be shown in the card
         ButtonModel(image: Image(systemName: "xmark"), color: .pink,action: .goLeft), // swipe left when button clicked
         ButtonModel(image: Image(systemName: "heart.fill"), color: .red,action: .goTop), // swipe top when button clicked
         ButtonModel(image: Image(systemName: "bubble.fill"), color: .purple,action: .goBottom), // swipe bottom when button clicked
-            ButtonModel(image: Image(systemName: "bolt.fill"), color: .blue,action: .goRight) // swipe right when button clicked
+        ButtonModel(image: Image(systemName: "bolt.fill"), color: .blue,action: .goRight) // swipe right when button clicked
         ]
 ```
 <Img width = 150 height = 250 src= "https://github.com/omarthamri/TinderSwipingAnimation/assets/39087448/b32b9ce4-e631-4cca-9df0-bb2bae63b8fd">
