@@ -12,12 +12,14 @@ struct Card: View {
     var card: CardModel
     var buttons: [ButtonModel]
     var orientation: TextOrientation
+    var backgroundColor: Color
     var viewModel: TinderViewModel
     var subscriptions: Set<AnyCancellable> = []
-    init(card: CardModel, buttons: [ButtonModel], viewModel: TinderViewModel,orientation: TextOrientation) {
+    init(card: CardModel, buttons: [ButtonModel], viewModel: TinderViewModel,orientation: TextOrientation,backgroundColor: Color) {
             self.card = card
             self.buttons = buttons
             self.orientation = orientation
+            self.backgroundColor = backgroundColor
             self.viewModel = viewModel
             self.viewModel.$titleColor.combineLatest(viewModel.$subtitleColor).sink { (_,_) in
             }
@@ -58,7 +60,7 @@ struct Card: View {
                     ButtonsView(buttons: buttons, viewModel: viewModel)
                 }
             }
-            .background(.white)
+            .background(backgroundColor)
             .clipShape(RoundedRectangle(cornerRadius: 25))
             if orientation == .vertical {
                             VStack(alignment: .leading,spacing: 12) {

@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MyTinderSwipingAnimation'
-  s.version          = '1.7.1'
-  s.summary          = 'TinderSwipingAnimation is a library written using SwiftUI to simplify the implementation of the tinder swipe animation.'
+  s.version          = '1.7.2'
+  s.summary          = 'TinderSwipingAnimation is an easy to use library written using SwiftUI to simplify the implementation of the tinder swipe animation.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
