@@ -68,7 +68,7 @@ struct Card: View {
                                     .font(viewModel.titleFont)
                                     .foregroundStyle(viewModel.titleColor)
                                     .fontWeight(.bold)
-                                Text("\(card.age)")
+                                Text(card.age)
                                     .font(viewModel.subtitleFont)
                                     .foregroundStyle(viewModel.subtitleColor)
                                     .fontWeight(.bold)
