@@ -38,6 +38,9 @@ struct CardView: View {
             viewModel.$goBottom.sink { _ in
                     }
                     .store(in: &subscriptions)
+            viewModel.$undo.sink { _ in
+                    }
+                    .store(in: &subscriptions)
         }
     var body: some View {
         ZStack {
@@ -45,7 +48,7 @@ struct CardView: View {
                 Card(card: cards[i], buttons: buttons, viewModel: viewModel, orientation: orientation, backgroundColor: backgroundColor)
                     .offset(x: self.x[i],y: y[i])
                     .rotationEffect(.init(degrees: degree[i]))
-                    .onChange(of: viewModel.goRight || viewModel.goLeft || viewModel.goBottom || viewModel.goTop) {
+                    .onChange(of: viewModel.goRight || viewModel.goLeft || viewModel.goBottom || viewModel.goTop || viewModel.undo) {
                                             if viewModel.goRight && abs(degree[i]) != 12 && abs(degree[i]) != 1 {
                                                 withAnimation(.default) {
                                                     viewModel.goRight = false
@@ -85,6 +88,19 @@ struct CardView: View {
                                                     viewModel.cardSwiped = (cards[i],Direction.bottom)
                                                     viewModel.cards[i].thumbsUpOpacity = 0
                                                     viewModel.cards[i].thumbsDownOpacity = 0
+                                                }
+                                            }  else if viewModel.undo {
+                                                viewModel.undo = false
+                                                if let lastIndex = degree.firstIndex(where: {abs($0) == 1 || abs($0) == 12}) {
+                                                    withAnimation(.default) {
+                                                        self.x[lastIndex] = 0
+                                                        self.y[lastIndex] = 0
+                                                        self.offset = 0
+                                                        self.degree[lastIndex] = 0
+                                                        viewModel.cardSwiped = (cards[i],Direction.undo)
+                                                        viewModel.cards[i].thumbsUpOpacity = 0
+                                                        viewModel.cards[i].thumbsDownOpacity = 0
+                                                    }
                                                 }
                                             }
                                         }

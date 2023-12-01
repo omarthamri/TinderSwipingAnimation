@@ -13,12 +13,14 @@ public enum Direction {
     case left
     case top
     case bottom
+    case undo
     public var description: String {
         switch self {
         case .right: return "right"
         case .left: return "left"
         case .top: return "top"
         case .bottom: return "bottom"
+        case .undo: return "undo"
         }
     }
 }

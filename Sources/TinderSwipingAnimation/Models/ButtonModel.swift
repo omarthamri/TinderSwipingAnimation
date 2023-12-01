@@ -23,5 +23,6 @@ public struct ButtonModel {
         case goLeft
         case goTop
         case goBottom
+        case undo
     }
 }

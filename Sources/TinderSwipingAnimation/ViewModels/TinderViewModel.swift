@@ -19,4 +19,5 @@ class TinderViewModel: ObservableObject {
     @Published var goLeft: Bool = false
     @Published var goTop: Bool = false
     @Published var goBottom: Bool = false
+    @Published var undo: Bool = false
 }
