@@ -74,7 +74,7 @@ struct Card: View {
                                     .fontWeight(.bold)
                             }
                             .padding(.bottom,buttons.count != 0 ? 100 : 15)
-                            .padding(.leading,10)
+                            .padding(.horizontal,20)
                         } else {
                             HStack(alignment: .bottom) {
                                 Text(card.name)
@@ -88,7 +88,7 @@ struct Card: View {
                                     .fontWeight(.bold)
                             }
                             .padding(.bottom,buttons.count != 0 ? 100 : 15)
-                            .padding(.horizontal,10)
+                            .padding(.horizontal,20)
                         }
         }
         
