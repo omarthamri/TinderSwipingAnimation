@@ -12,16 +12,26 @@ public struct TinderSwipingAnimation: View {
     
     var cards: [CardModel]
     var buttons: [ButtonModel]
-    var options: [String: Any] = ["orientation" : TextOrientation.vertical,"backgroundColor": Color.white]
+    var options: [TinderSwipingAnimationOption]
+    var orientation: TextOrientation = .vertical
+    var backgroundColor: Color = .white
     var onSwipe: (_ cardModel: CardModel,_ direction: Direction) -> () = {_,_  in }
         private var subscriptions: Set<AnyCancellable> = []
         private var viewModel = TinderViewModel()
-        public init(cards: [CardModel], buttons: [ButtonModel],onSwipe: @escaping (_ cardModel: CardModel,_ direction: Direction) -> (),options: [String: Any] = ["orientation" : TextOrientation.vertical,"backgroundColor": Color.white] ) {
+        public init(cards: [CardModel], buttons: [ButtonModel],onSwipe: @escaping (_ cardModel: CardModel,_ direction: Direction) -> (),options: [TinderSwipingAnimationOption] = [.orientation(.vertical),.backgroundColor(.white)] ) {
             self.cards = cards
             self.buttons = buttons
             self.options = options
             self.onSwipe = onSwipe
             viewModel.cards = cards
+            for i in 0 ..< options.count {
+                        switch options[i] {
+                        case .orientation(let orientation):
+                            self.orientation = orientation
+                        case .backgroundColor(let backgroundColor):
+                            self.backgroundColor = backgroundColor
+                        }
+                    }
             viewModel.$cardSwiped.sink { [self] (card,direction) in
                 guard let card = card, let direction = direction else { return }
                 self.onSwipe(card,direction)
@@ -30,7 +40,7 @@ public struct TinderSwipingAnimation: View {
         }
 
     public var body: some View {
-        return CardView(cards: cards, buttons: buttons,viewModel: viewModel, orientation: options["orientation"] as? TextOrientation ?? .vertical,backgroundColor: options["backgroundColor"] as? Color ?? .white)
+        CardView(cards: cards, buttons: buttons,viewModel: viewModel, orientation: orientation,backgroundColor: backgroundColor)
     }
     
     
