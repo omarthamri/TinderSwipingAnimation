@@ -6,7 +6,7 @@ TinderSwipingAnimation is an easy to use library written using SwiftUI to simpli
 ### Swift Package Manager
 * File > Swift Packages > Add Package Dependency
 * Add ```https://github.com/omarthamri/TinderSwipingAnimation.git```
-* Select "Up to Next Major" with "1.9.1"
+* Select "Up to Next Major" with "1.9.2"
 ### Cocoapods
 ```
 target 'MyApp' do
@@ -70,18 +70,18 @@ TinderSwipingAnimation(cards: cards, buttons: buttons) { (cardModel,direction) i
         }
         .tinderSwipingStyle(titleColor: .red, subtitleColor: .red, titleFont: .largeTitle, subtitleFont: .largeTitle)
 ```
-If you want to change the orientation of the text inside your card you can use options with the key orientation. we got two orientations options ```.horizontal``` and ```.vertical```. By default the text orientation inside the card is ```.vertical```.
-You can also use options with the key ```backgroundColor``` to change the background color of the card. By default the background color of the card is white.
+If you want to change the orientation of the text inside your card you can use options with ```.orientation```. we got two orientations options ```.horizontal``` and ```.vertical```. By default the text orientation inside the card is ```.vertical```.
+You can also use options with ```.backgroundColor``` to change the background color of the card. By default the background color of the card is ```.white```.
 ```
 TinderSwipingAnimation(
-                    cards: cards,
-                    buttons: buttons,
-                    onSwipe:  { (cardModel,direction) in // Closure to be called when a card is swiped.
-                        print("Swiped \(cardModel.name) to \(direction.description)")
-                    }, options: [
-                        "orientation": TextOrientation.horizontal, // this is setting text orientation inside card to horizontal
-                        "backgroundColor": Color.yellow // This setting background color inside card to yellow
-                    ])
+                            cards: cards,
+                            buttons: buttons,
+                            onSwipe:  { (cardModel,direction) in // Closure to be called when a card is swiped.
+                                print("Swiped \(cardModel.name) to \(direction.description)")
+                            }, options: [
+                                .orientation(.horizontal), // this is setting text orientation inside card to horizontal
+                                .backgroundColor(.yellow) // This setting background color inside card to yellow
+                            ])
 ```
 <Img width = 150 height = 250 src= "https://github.com/omarthamri/TinderSwipingAnimation/assets/39087448/c40f2319-bd8b-4350-86de-a145dbeb5d9a">
 
